@@ -1,0 +1,25 @@
+{
+    
+    "files.exclude": {
+        // "**/*.map": true
+        "**/.sf" : true,
+        "**/.sfdx": true,
+        "**/.husky": true,
+        "**/config": true,
+        "sfdx-project.json": true,
+        "README.md": true,
+        
+        "node_modules": true,
+        "jest.config.js": true,
+        ".eslintignore": true,
+        ".forceignore": true,
+    },
+
+    "search.exclude": {
+        "**/node_modules": true,
+        "**/bower_components": true,
+        "**/*.code-search": true, 
+        "**/package-lock.json": true,
+        "**/package.json": true,
+    }
+}
