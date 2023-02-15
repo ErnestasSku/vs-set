@@ -11,7 +11,8 @@ pub fn build_map() -> HashMap<String, String>
     map
 }
 
-const GODOT: &str = r#"{
+const GODOT: &str = r#"
+{
     "files.exclude": {
         "**/.git": true,
         "**/.svn": true,
@@ -46,9 +47,11 @@ const GODOT: &str = r#"{
         "stop_token": "cpp"
     }
     
-}"#;
+}
+"#;
 
-const SALESFORCE: &str = r#"{
+const SALESFORCE: &str = r#"
+{
     
     "files.exclude": {
         // "**/*.map": true
@@ -59,6 +62,7 @@ const SALESFORCE: &str = r#"{
         "sfdx-project.json": true,
         "README.md": true,
         
+        //Not sure about these
         "node_modules": true,
         "jest.config.js": true,
         ".eslintignore": true,
@@ -71,5 +75,19 @@ const SALESFORCE: &str = r#"{
         "**/*.code-search": true, 
         "**/package-lock.json": true,
         "**/package.json": true,
+    },
+
+    "explorer.fileNesting.enabled": true,
+    "explorer.fileNesting.expand": false,
+    "explorer.fileNesting.patterns": {
+        "*.cls" : "${capture}.cls-meta.xml",
+        "*.cmp" : "${capture}.cmp-meta.xml",
+        "*.js": "${capture}.js-meta.xml",
+        "*.page": "${capture}.page-meta.xml",
+        "*.trigger": "${capture}.trigger-meta.xml",
+        "*.component": "${capture}.component-meta.xml",
+        "package.json": "package-lock.json",
+        
     }
-}"#;
+}
+"#;
