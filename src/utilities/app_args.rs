@@ -28,6 +28,9 @@ pub enum Type {
     Sf,
     Salesforce,
     Godot,
+    Haskell,
+    Hs,
+    Prolog
 }
 
 pub trait Config {
@@ -58,6 +61,9 @@ impl Config for Type {
             Type::Sf => String::from("Salesforce"),
             Type::Salesforce => String::from("Salesforce"),
             Type::Godot => String::from("Godot"),
+            Type::Haskell => String::from("Haskell"),
+            Type::Hs => String::from("Haskell"),
+            Type::Prolog => String::from("Prolog"), 
         }
     }
 }

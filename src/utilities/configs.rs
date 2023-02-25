@@ -7,6 +7,9 @@ pub fn build_map() -> HashMap<String, String>
 
     map.insert("Godot".into(), GODOT.into());
     map.insert("Salesforce".into(), SALESFORCE.into());
+    map.insert("Haskell".into(), HASKELL.into());
+    map.insert("Prolog".into(), PROLOG.into());
+
 
     map
 }
@@ -52,7 +55,6 @@ const GODOT: &str = r#"
 
 const SALESFORCE: &str = r#"
 {
-    
     "files.exclude": {
         // "**/*.map": true
         "**/.sf" : true,
@@ -89,5 +91,39 @@ const SALESFORCE: &str = r#"
         "package.json": "package-lock.json",
         
     }
+}
+"#;
+
+const HASKELL: &str = r#"
+{
+
+    "[haskell]": {
+        "editor.tabSize": 2
+    },
+    "cSpell.words": [
+        "foldr",
+        "foldr1",
+        "foldr'",
+        "foldr1'",
+        "foldM",
+        "foldM_",
+        "foldl",
+        "foldl'",
+        "foldl1",
+        "foldl1'",
+        "filterM",
+        "Outp",
+        "Prec",
+        "Parsec",
+        "nub"
+    ],
+}
+"#;
+
+const PROLOG: &str = r#"
+{
+    "files.associations": {
+        "**/*.pl" : "prolog"
+    }        
 }
 "#;
